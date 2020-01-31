@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Final Project: Home Page</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type='text/javascript' src='js/main.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <nav>
+                <a class="active" href="home.html">Home</a>
+                <a href="quiz.html">Quiz</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </div>
+    </div>
+
+    <!--    this describe today's Day-->
+    <p id="todayDay"></p>
+
+    <!--    this describe image slider-->
+    <div class="slideImage">
+
+        <div class="imageSlider fade">
+            <h1 class="hover" style="text-align: center">Maths</h1>
+            <img src="images/maths.jpg" style="width:100%" height="600 px">
+            <div class="text">Maths</div>
+        </div>
+
+        <div class="imageSlider fade">
+            <h1 class="hover" style="text-align: center">History</h1>
+            <img src="images/history.jpg" style="width:100%" height="600 px">
+            <div class="text">History</div>
+        </div>
+
+        <div class="imageSlider fade">
+            <h1 class="hover" style="text-align: center">English</h1>
+            <img src="images/english.jpg" style="width:100%" height="600 px">
+            <div class="text">English</div>
+        </div>
+
+        <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div class="footer">
+        <div class="container">Copyright &copy; 2019 Javascript Final Group Project</div>
+    </div>
+
+
+
+    <script>
+        document.getElementById("todayDay").innerHTML = "Today's Day: " + day;
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0');
+        var yyyy = today.getFullYear();
+        today = mm + '/' + dd + '/' + yyyy;
+        document.write("Today's Date: ", today);
+
+        // this script for heading color change jQuery Methods
+        $(document).ready(function() {
+            $(".hover").on({
+                mouseenter: function() {
+                    $(this).css("background-color", "lightgray");
+                },
+                mouseleave: function() {
+                    $(this).css("background-color", "lightblue");
+                },
+                click: function() {
+                    $(this).css("background-color", "yellow");
+                }
+            });
+        });
+
+
+        // code for image sliding
+        var index_of_slides = 1;
+        displaySlides(index_of_slides);
+
+        function plusSlides(n) {
+            displaySlides(index_of_slides += n);
+        }
+
+        function displaySlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("imageSlider");
+            if (n > slides.length) {
+                index_of_slides = 1
+            }
+            if (n < 1) {
+                index_of_slides = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[index_of_slides - 1].style.display = "block";
+        }
+    </script>
+
+
+</body></html>

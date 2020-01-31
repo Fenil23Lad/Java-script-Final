@@ -1,0 +1,13 @@
+<div style="text-align: center; font-size: 26px; background-color: azure">
+<h3>Services List</h3>
+
+<ul>
+  <li>Writing/Tutoring Centres</li>
+  <li>Counselling</li>
+  <li>Disability Services</li>
+  <li>Health Services</li>
+  <li>Financial Aid</li>
+</ul> 
+
+
+</div>

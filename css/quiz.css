@@ -1,0 +1,57 @@
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+#quiz {
+    text-indent: 10px;
+    display:none;
+}
+
+.button {
+    width: 40px;
+    padding-left:10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    float:right;
+    background-color: blue;
+    color: black;
+    margin: 0 2px 0 2px;
+}
+
+
+button {
+    position: relative;
+    float:right;
+}
+
+.button a {
+    text-decoration: none;
+    color: white;
+}
+
+#container {
+    width:50%;
+    margin:auto;
+    padding: 0 25px 40px 10px;
+    background-color: crimson;
+    border-radius:5px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+#start {
+    display:none;
+    width: 90px;
+}
